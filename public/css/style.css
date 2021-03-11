@@ -92,7 +92,6 @@ main .introduce a {
   color: white;
   border: none;
   background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
-  width: 75%;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -140,7 +139,6 @@ main .block-site-operation .list-of-steps {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
   width: 90%;
 }
 main .block-site-operation .steps {

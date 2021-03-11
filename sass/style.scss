@@ -109,7 +109,6 @@ main {
             color: white;
             border: none;
             background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
-            width: 75%;
             text-align: center;
             transition: all 0.3s ease-in-out;
         }
@@ -162,7 +161,6 @@ main {
             display: flex;
             align-items: center;
             justify-content: center; 
-            margin-bottom: 1rem;
             width: 90%;
         }
 
@@ -264,7 +262,7 @@ main {
                     align-items: center;
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
-
+                    
                     .menu-restaurant {
                         margin-left: 1rem;
 
@@ -272,6 +270,7 @@ main {
                         margin: 0.2rem;
                         font-size: 1.3rem;
                         font-family: "Roboto";
+
                         }
 
                         .location-restaurant {
