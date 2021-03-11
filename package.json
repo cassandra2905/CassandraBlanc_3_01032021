@@ -1,10 +1,11 @@
 {
-  "name": "p3_dynamisez_une_page_web_avec_des_animations_css",
-  "version": "1.0.0",
+  "name": "cassandra_blanc_3_01032021",
+  "version": "0.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./public/css/style.css"
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css",
+    "sass2": "sass --watch ./sass/style2.scss:./public/css/style2.css"
   },
   "author": "",
   "license": "ISC",

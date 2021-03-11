@@ -48,8 +48,8 @@ main {
 
     .localization {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         background-color: $color-light-grey;
         height: 10vh;
         width: 100%;
@@ -58,10 +58,6 @@ main {
             font-size: 1.5rem;
             padding-right: 0.5rem;
             color: $color-text-localization;
-        }
-    
-        button {
-            display: none;
         }
     
         input {
@@ -103,8 +99,9 @@ main {
 
            
         }
-
-        button {
+            
+        a {
+            text-decoration: none;
             font-family: "Roboto";
             border-radius: 50rem;
             font-size: 1.2rem;
@@ -113,9 +110,11 @@ main {
             border: none;
             background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
             width: 75%;
+            text-align: center;
             transition: all 0.3s ease-in-out;
         }
-        button:hover {
+
+        a:hover {
             background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 100%);
             box-shadow: 0px 5px 21px -2px $color-box-shadow;
             cursor: pointer;
@@ -128,7 +127,7 @@ main {
         justify-content: center;
         padding-bottom: 3rem;
 
-        > h2 {
+        > h1 {
             font-family: "Roboto";
             padding-left: 2rem;
             align-self: flex-start;    
@@ -201,13 +200,13 @@ main {
         }
     }
     
-    .restaurant-main-block {
+    #restaurant-main-block {
         width: 100%;
         background-color: $color-introduce;
         padding-top: 2rem;
         padding-bottom: 2rem;
 
-        h2 {
+        h1 {
             font-family: "Roboto";
             padding-left: 2rem;
             padding-bottom: 1rem;
@@ -255,6 +254,7 @@ main {
                         border-radius: 15px 15px 0 0;
                         height: 28vh;
                         object-fit: cover;
+                        width: 100%;
                     }
                 }
 
@@ -268,7 +268,7 @@ main {
                     .menu-restaurant {
                         margin-left: 1rem;
 
-                        h3 {
+                        h2 {
                         margin: 0.2rem;
                         font-size: 1.3rem;
                         font-family: "Roboto";
@@ -278,6 +278,8 @@ main {
                             font-family: "Roboto";
                             font-size: 1.2rem;
                             color: $color-text-localization; 
+                            margin: none;
+                            display: inline;
                         }
                     }
                 }
@@ -343,8 +345,4 @@ footer {
             padding-bottom: 0.5rem;
         }
     }
-}
-
-.restaurant-pictures img {
-    width: 100%;
 }

@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 100%;
+  box-shadow: 0 0 5px #777;
+  height: 12vh;
+  background-color: white;
+  z-index: 10;
+}
+header .logo > img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  padding-top: 1rem;
+}
+
+footer {
+  background-color: #3d3a3a;
+  height: 25vh;
+  padding: 2rem 0 2rem 2rem;
+  box-sizing: content-box;
+  height: 100%;
+}
+footer > .logo-footer {
+  font-family: "Shrikhand";
+  font-size: 1.5rem;
+  color: white;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  box-sizing: content-box;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+footer .rubric-list {
+  font-family: "Roboto";
+  color: white;
+  font-size: 1rem;
+  box-sizing: content-box;
+  width: 90%;
+  list-style: none;
+  padding: 0;
+}
+footer .rubric-list .fas {
+  width: 1.5rem;
+  padding-right: 0.5rem;
+}
+footer .rubric-list > li {
+  padding-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=style2.css.map */
