@@ -17,16 +17,12 @@ header {
   box-sizing: content-box;
   width: 100%;
   box-shadow: 0 0 5px #777;
-  height: 12vh;
+  height: 9vh;
   background-color: white;
   z-index: 10;
-}
-header .logo > img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60vw;
-  padding-top: 1rem;
+  font-family: "Shrikhand";
+  font-size: 1rem;
+  padding-top: 0.5rem;
 }
 
 main {
@@ -106,9 +102,10 @@ main .block-site-operation {
   justify-content: center;
   padding-bottom: 3rem;
 }
-main .block-site-operation > h1 {
+main .block-site-operation > h3 {
+  font-size: 1.5rem;
   font-family: "Roboto";
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   align-self: flex-start;
 }
 main .block-site-operation .number-step {
@@ -169,18 +166,19 @@ main .block-site-operation .steps .icone i.fas {
 main .block-site-operation .steps:hover i.fas {
   color: #9356dc;
 }
-main #restaurant-main-block {
+main .restaurant-main-block {
   width: 100%;
   background-color: #f2f2f2;
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-main #restaurant-main-block h1 {
+main .restaurant-main-block h3 {
   font-family: "Roboto";
-  padding-left: 2rem;
+  font-size: 1.5rem;
+  padding-left: 1.5rem;
   padding-bottom: 1rem;
 }
-main #restaurant-main-block .restaurant-list {
+main .restaurant-main-block .restaurant-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,13 +188,13 @@ main #restaurant-main-block .restaurant-list {
   margin-left: 0;
   padding-left: 0;
 }
-main #restaurant-main-block .restaurant-list .restaurant {
+main .restaurant-main-block .restaurant-list .restaurant {
   background-color: white;
   border-radius: 15px;
   width: 90%;
   margin-bottom: 2rem;
 }
-main #restaurant-main-block .restaurant-list .restaurant .new {
+main .restaurant-main-block .restaurant-list .restaurant .new {
   position: relative;
   margin-bottom: -3rem;
   margin-right: 1rem;
@@ -211,41 +209,41 @@ main #restaurant-main-block .restaurant-list .restaurant .new {
   justify-content: center;
   width: 20vw;
 }
-main #restaurant-main-block .restaurant-list .restaurant .restaurant-pictures {
+main .restaurant-main-block .restaurant-list .restaurant .restaurant-pictures {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-main #restaurant-main-block .restaurant-list .restaurant .restaurant-pictures img {
+main .restaurant-main-block .restaurant-list .restaurant .restaurant-pictures img {
   border-radius: 15px 15px 0 0;
   height: 28vh;
   object-fit: cover;
   width: 100%;
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description {
+main .restaurant-main-block .restaurant-list .restaurant .block-restaurant-description {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant {
+main .restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant {
   margin-left: 1rem;
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant h2 {
+main .restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant h4 {
   margin: 0.2rem;
   font-size: 1.3rem;
   font-family: "Roboto";
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant .location-restaurant {
+main .restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant .location-restaurant {
   font-family: "Roboto";
   font-size: 1.2rem;
   color: #494545;
   margin: none;
   display: inline;
 }
-main #restaurant-main-block .restaurant-list .restaurant .fa-heart {
+main .restaurant-main-block .restaurant-list .restaurant .fa-heart {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   background-clip: text;
@@ -255,7 +253,7 @@ main #restaurant-main-block .restaurant-list .restaurant .fa-heart {
   margin-right: 1rem;
   transition: color 0.3s ease-in-out;
 }
-main #restaurant-main-block .restaurant-list .restaurant .fa-heart:hover {
+main .restaurant-main-block .restaurant-list .restaurant .fa-heart:hover {
   font-weight: bold;
   color: transparent;
   cursor: pointer;
