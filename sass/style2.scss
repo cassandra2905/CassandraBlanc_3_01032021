@@ -7,33 +7,33 @@ $color-introduce: #f2f2f2;
 $color-box-shadow: #777;
 
 body {
-    margin: 0;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: content-box;
     width: 100%;
     height: 9vh;
-    box-sizing: content-box;
-    box-shadow: 0 0 5px #777;
-    padding-top: 1rem;
     background-color: white;
     z-index: 10;
+    padding-top: 1rem;
+    box-shadow: 0 0 5px #777;
 
     a {
-        color: $color-text-localization;
-        width: 2rem;
-        height: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        width: 2rem;
+        height: 2rem;
+        color: $color-text-localization;
 
         i {
             font-size: 1.3rem;
@@ -45,8 +45,8 @@ header {
         align-items: center;
         justify-content: center;
         font-family: "Shrikhand";
-        font-size: 2rem;
         margin: 0 4rem 0 3rem;  
+        font-size: 2rem;
     }
 }
 
@@ -71,8 +71,8 @@ main {
 
         .french-style {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             margin-bottom: 1.5rem;
     
             h2 {
@@ -82,13 +82,12 @@ main {
             }
     
             i {
-                margin-right: 1.5rem;
-                font-size: 1.8rem;
-                color: $color-text-localization;
                 background: -webkit-linear-gradient(#9356dc, #ff79da);
+                margin-right: 1.5rem;
+                height: 100%;
+                font-size: 1.8rem;
                 -webkit-background-clip: text;
                 background-clip: text;
-                height: 100%;
                 color: $color-text-localization;
                 margin-right: 1rem;  
                 transition: color 0.3s ease-in-out;
@@ -102,35 +101,35 @@ main {
         }
 
         h3 {
-            font-family: "Roboto";
-            color: $color-text-localization;
             text-transform: uppercase;
             font-weight: normal;
-            font-size: 1rem;
             margin-bottom: 0.3rem;
+            font-family: "Roboto";
+            font-size: 1rem;
+            color: $color-text-localization;
         }
 
         .underline {
             display: block;
-            border: 2px solid $color-tertiary;
             width: 2.2rem;
+            border: 2px solid $color-tertiary;
         }
 
 
         .menu-list {
             list-style: none;
             padding: 0;
-            font-family: "Roboto";
             padding-bottom: 1.5rem; 
+            font-family: "Roboto";
 
             .menu {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 background-color: white;
-                border-radius: 1rem;
                 margin: 1rem 0;
                 padding: 0.7rem 1rem 0.7rem 0.5rem;
+                border-radius: 1rem;
                 box-shadow: 0 0 10px #ddd;
 
                 h4 {
@@ -141,14 +140,14 @@ main {
 
                 h5 {
                     margin: 0;
-                    color: $color-text-localization;
                     font-weight: normal;
                     font-size: 1rem;
+                    color: $color-text-localization;
                 }
 
                 p {
-                    margin: 0;
                     font-weight: bold;
+                    margin: 0;
                     color: $color-text-localization;
                 }
             }
@@ -162,38 +161,35 @@ main {
             button {
                 width: 63%;
                 padding: 1rem 0;
-                text-decoration: none;
-                font-family: "Roboto";
-                border-radius: 50rem;
-                font-size: 1.2rem;
-                color: white;
-                border: none;
-                background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
                 text-align: center;
+                text-decoration: none;
+                border: none;
+                font-family: "Roboto";
+                color: white;
+                font-size: 1.2rem;
+                border-radius: 50rem;
+                background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
                 transition: all 0.3s ease-in-out;
                 
-                button:hover {
-                    background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 100%);
-                    box-shadow: 0px 5px 21px -2px $color-box-shadow;
-                    cursor: pointer;
-                }
+            }
+            
+            button:hover {
+                background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 100%);
+                box-shadow: 0px 5px 21px -2px $color-box-shadow;
+                cursor: pointer;
             }
         }
     }   
 }
 
 footer {
-    background-color: #3d3a3a;
-    height: 25vh;
-    padding: 2rem 0 2rem 2rem;
     box-sizing: content-box;
     height: 100%;
+    height: 25vh;
+    padding: 2rem 0 2rem 2rem;
+    background-color: #3d3a3a;
 
     > .logo-footer {
-        font-family: "Shrikhand";
-        font-size: 1.5rem;
-        color: white;
-        padding-bottom: 2rem;
         display: flex;
         align-items: center;
         align-content: space-between;
@@ -201,16 +197,20 @@ footer {
         width: 90%;
         margin: 0;
         padding: 0;
+        padding-bottom: 2rem;
+        font-family: "Shrikhand";
+        font-size: 1.5rem;
+        color: white;
     }
 
     .rubric-list {
         font-family: "Roboto";
-        color: white;
-        font-size: 1rem;
         box-sizing: content-box;
-        width: 90%;
         list-style: none;
+        width: 90%;
         padding: 0;
+        font-size: 1rem;
+        color: white;
     
         .fas {
             width: 1.5rem;
