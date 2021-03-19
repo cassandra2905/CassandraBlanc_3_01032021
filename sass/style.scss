@@ -74,8 +74,9 @@ main {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        box-sizing: content-box;
+        box-sizing: border-box;
         padding: 3rem 1rem;
+        width: 100%;
         background-color: $color-introduce;
 
         h2 {
@@ -307,6 +308,7 @@ footer {
     height: 25vh;
     padding: 2rem 0 2rem 2rem;
     background-color: #3d3a3a;
+    z-index: 8;
 
     > .logo-footer {
         display: flex;
@@ -342,3 +344,40 @@ footer {
         }
     }
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: 0.5s linear 1s forwards display-loader;
+}
+
+#loading {
+    width: 7rem;
+    height: 7rem;
+    border: 5px solid $secondary-color;
+    border-radius: 20rem;
+    border-left: 5px solid transparent;
+
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes display-loader {
+    0% { opacity: 1; z-index: 100; }
+    90% { opacity: 0; z-index: 100; }
+    100% { opacity: 0; z-index: 1; }
+}
+ 
