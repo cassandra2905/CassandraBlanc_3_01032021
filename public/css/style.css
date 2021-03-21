@@ -230,6 +230,9 @@ main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-descr
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description a {
+  text-decoration: none;
+}
 main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant {
   margin-left: 1rem;
 }

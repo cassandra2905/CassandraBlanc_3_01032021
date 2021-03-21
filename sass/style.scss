@@ -261,15 +261,18 @@ main {
                     justify-content: space-between;
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
+
+                    a {
+                        text-decoration: none;
+                    }
                     
                     .menu-restaurant {
                         margin-left: 1rem;
-
+                        
                         h4 {
                             margin: 0.2rem;
                             font-size: 1.3rem;
                             font-family: "Roboto";
-
                         }
 
                         .location-restaurant {
@@ -277,7 +280,7 @@ main {
                             margin: none;
                             font-family: "Roboto";
                             font-size: 1.2rem;
-                            color: $color-text-localization; 
+                            color: $color-text-localization;
                         }
                     }
                 }
