@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./public/css/style.css",
-    "sass2": "sass --watch ./sass/style2.scss:./public/css/style2.css"
+    "sass": "sass --watch ./sass:./public/css"
   },
   "author": "",
   "license": "Apache-2.0",

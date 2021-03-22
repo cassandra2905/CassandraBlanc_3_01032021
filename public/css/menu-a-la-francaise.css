@@ -60,10 +60,10 @@ body > header .logo {
 main {
   background-color: #f2f2f2;
 }
-main .french-style-header {
+main .menu-header {
   margin: 0;
 }
-main .french-style-header img {
+main .menu-header img {
   width: 100%;
 }
 main .block-menu {
@@ -73,18 +73,18 @@ main .block-menu {
   border-radius: 3rem 3rem 0 0;
   background-color: #f2f2f2;
 }
-main .block-menu .french-style {
+main .block-menu .menu-style {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
-main .block-menu .french-style h2 {
+main .block-menu .menu-style h2 {
   margin: 0;
   font-family: "Shrikhand";
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
-main .block-menu .french-style i {
+main .block-menu .menu-style i {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   margin-right: 1.5rem;
   height: 100%;
@@ -96,7 +96,7 @@ main .block-menu .french-style i {
   transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
-main .block-menu .french-style i:hover {
+main .block-menu .menu-style i:hover {
   font-weight: bold;
   color: transparent;
 }
@@ -184,6 +184,12 @@ main .block-menu .menu-list .menu:hover .check {
 main .block-menu .menu-list .menu:hover .check i {
   animation: rotation 0.3s linear forwards;
 }
+main .block-menu .menu-list .element2 {
+  animation-delay: 0.25s;
+}
+main .block-menu .menu-list .element3 {
+  animation-delay: 0.5s;
+}
 main .block-menu .button-order {
   display: flex;
   align-items: center;
@@ -249,12 +255,4 @@ footer .rubric-list a {
   color: white;
 }
 
-.element2 {
-  animation-delay: 0.25s;
-}
-
-.element3 {
-  animation-delay: 0.5s;
-}
-
-/*# sourceMappingURL=style2.css.map */
+/*# sourceMappingURL=menu-a-la-francaise.css.map */
