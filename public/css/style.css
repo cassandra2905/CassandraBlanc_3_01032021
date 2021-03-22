@@ -232,6 +232,7 @@ main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-descr
 }
 main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description a {
   text-decoration: none;
+  color: black;
 }
 main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant {
   margin-left: 1rem;
@@ -299,6 +300,10 @@ footer .rubric-list .fas {
 }
 footer .rubric-list > li {
   padding-bottom: 0.5rem;
+}
+footer .rubric-list a {
+  text-decoration: none;
+  color: white;
 }
 
 .loader {

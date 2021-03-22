@@ -1,3 +1,21 @@
+@keyframes apparition {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 body {
   display: flex;
   flex-direction: column;
@@ -6,7 +24,7 @@ body {
   margin: 0;
 }
 
-header {
+body > header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +36,7 @@ header {
   padding-top: 1rem;
   box-shadow: 0 0 5px #777;
 }
-header a {
+body > header a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,10 +45,10 @@ header a {
   height: 2rem;
   color: #494545;
 }
-header a i {
+body > header a i {
   font-size: 1.3rem;
 }
-header .logo {
+body > header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -226,6 +244,10 @@ footer .rubric-list .fas {
 footer .rubric-list > li {
   padding-bottom: 0.5rem;
 }
+footer .rubric-list a {
+  text-decoration: none;
+  color: white;
+}
 
 .element2 {
   animation-delay: 0.25s;
@@ -233,25 +255,6 @@ footer .rubric-list > li {
 
 .element3 {
   animation-delay: 0.5s;
-}
-
-@keyframes apparition {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*# sourceMappingURL=style2.css.map */
