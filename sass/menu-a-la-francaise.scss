@@ -6,6 +6,22 @@ $color-light-grey: #eaeaea;
 $color-introduce: #f2f2f2;
 $color-box-shadow: #777;
 
+@keyframes apparition {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -14,7 +30,7 @@ body {
     margin: 0;
 }
 
-header {
+body > header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,6 +284,12 @@ footer {
     
         > li {
             padding-bottom: 0.5rem;
+
+        }
+
+        a { 
+            text-decoration: none;
+            color: white;
         }
     }
 }
@@ -280,18 +302,4 @@ footer {
     animation-delay: 0.5s;
 }
 
-@keyframes apparition {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-  
-@keyframes rotation {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
