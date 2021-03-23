@@ -301,7 +301,7 @@ footer .rubric-list .fas {
 footer .rubric-list > li {
   padding-bottom: 0.5rem;
 }
-footer .rubric-list a {
+footer .rubric-list > li a {
   text-decoration: none;
   color: white;
 }
