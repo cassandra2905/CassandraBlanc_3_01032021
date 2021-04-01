@@ -1,0 +1,312 @@
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$color-tertiary: #99e2d0;
+$color-text-localization: #494545;
+$color-light-grey: #eaeaea;
+$color-introduce: #f2f2f2;
+$color-box-shadow: #777;
+
+@keyframes apparition {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body > header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    width: 100%;
+    height: 9vh;
+    background-color: white;
+    z-index: 10;
+    padding-top: 1rem;
+    box-shadow: 0 0 5px #777;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 2rem;
+        height: 2rem;
+        color: $color-text-localization;
+
+        i {
+            font-size: 1.3rem;
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Shrikhand";
+        margin: 0 4rem 0 3rem;  
+        font-size: 2rem;
+    }
+}
+
+main {
+    background-color: $color-introduce;
+
+}
+
+.menu-header {
+    margin: 0;
+    height: 50vh;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+.block-menu {
+    position: relative;
+    top: -3rem;
+    padding: 2rem 1rem;
+    border-radius: 3rem 3rem 0 0;
+    background-color: $color-introduce;
+}
+
+.menu-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    h2 {
+        margin: 0;
+        font-family: "Shrikhand";
+        font-size: 1.7rem;
+    }
+
+    i {
+        background: -webkit-linear-gradient(#9356dc, #ff79da);
+        margin-right: 1.5rem;
+        height: 100%;
+        font-size: 1.8rem;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: $color-text-localization;
+        margin-right: 1rem;  
+        transition: color 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    i:hover {
+        font-weight: bold;
+        color: transparent;
+    }
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: $color-text-localization;
+}
+
+.underline {
+    display: block;
+    width: 2.2rem;
+    border: 2px solid $color-tertiary;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 1.5rem; 
+    font-family: "Roboto";
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #ddd;
+    opacity: 0;
+    cursor: pointer;
+
+    animation-name: apparition;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;            
+
+    h4 {
+        width: 100%;
+        margin: 0 0 0.2rem 0;
+        font-size: 1.2rem;
+        padding: 0.7rem 0 0 0.5rem;
+
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+
+    h5 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1rem;
+        color: $color-text-localization;
+        padding: 0 0 0.7rem 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        grid-column: 3;
+        grid-row: 2;
+        margin: 0;
+        font-weight: bold;
+        color: $color-text-localization;
+    }
+
+    .check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-tertiary;
+        color: white;
+        font-size: 1.5rem;
+        height: 100%;
+        width: 0;
+        opacity: 0;
+        border-radius: 0 1rem 1rem 0;
+    
+        transition: width 0.3s, opacity 0.3s;
+            
+        grid-row: 1/3;
+        grid-column: 4;
+    }
+
+}
+
+.menu:hover .check {
+    width: 4rem;
+    opacity: 1;
+}
+
+.menu:hover .check i {
+    animation: rotation 0.3s linear forwards;
+}
+
+.element2 {
+    animation-delay: 0.25s;
+}
+
+.element3 {
+    animation-delay: 0.5s;
+}
+
+.element4 {
+    animation-delay: 0.75s;
+}
+
+.button-order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        text-align: center;
+        text-decoration: none;
+        width: 63%;
+        padding: 1rem 0;
+        border: none;
+        font-family: "Roboto";
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 50rem;
+        background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
+        transition: all 0.3s ease-in-out;
+        
+    }
+    
+    button:hover {
+        background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 100%);
+        box-shadow: 0px 5px 21px -2px $color-box-shadow;
+        cursor: pointer;
+    }
+}
+
+footer {
+    box-sizing: content-box;
+    height: 100%;
+    height: 25vh;
+    padding: 2rem 0 2rem 2rem;
+    background-color: #3d3a3a;
+
+    > .logo-footer {
+        display: flex;
+        align-items: center;
+        align-content: space-between;
+        box-sizing: content-box;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 2rem;
+        font-family: "Shrikhand";
+        font-size: 1.5rem;
+        color: white;
+    }
+
+}
+
+.rubric-list {
+    font-family: "Roboto";
+    box-sizing: content-box;
+    list-style: none;
+    width: 90%;
+    padding: 0;
+    font-size: 1rem;
+    color: white;
+
+    .fas {
+        width: 1.5rem;
+        padding-right: 0.5rem;
+
+    }
+
+    > li {
+        padding-bottom: 0.5rem;
+
+        a { 
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+
+

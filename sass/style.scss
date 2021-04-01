@@ -6,6 +6,16 @@ $color-light-grey: #eaeaea;
 $color-introduce: #f2f2f2;
 $color-box-shadow: #777;
 
+@keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes display-loader {
+    0% { opacity: 1; z-index: 100; }
+    90% { opacity: 0; z-index: 100; }
+    100% { opacity: 0; z-index: 1; }
+}
 
 .bold {
     font-weight: bold;
@@ -41,269 +51,268 @@ main {
     flex-direction: column;
     min-height: 70vh;
     z-index: 9;
+}
 
-    .localization {
+.localization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: $color-light-grey;
+
+    .fas {
+        padding-right: 0.5rem;
+        font-size: 1.5rem;
+        color: $color-text-localization;
+    }
+
+    input {
+        text-align: center;
+        width: 40%;
+        min-width: 5rem;
+        border: none;
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 1rem;
+        background-color: #eaeaea;
+        color: $color-text-localization;
+    }
+}
+
+.introduce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 3rem 1rem;
+    width: 100%;
+    background-color: $color-introduce;
+
+    h2 {
+        text-align: center;
+        margin: 0 0;
+        padding: 0 3rem;
+        font-family: "Roboto";
+    }
+
+    p {
+        text-align: center;
+        font-family: "Roboto";
+        margin: 1rem 0 2rem;
+        font-size: 1.2rem;
+        font-weight: 100;
+        color: $color-text-localization; 
+    }
+        
+    a {
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 50rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        font-family: "Roboto";
+        background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+        background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 100%);
+        box-shadow: 0px 5px 21px -2px $color-box-shadow;
+        cursor: pointer;
+    }
+}
+
+.block-site-operation {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 3rem;
+
+    > h3 {
+        align-self: flex-start;    
+        font-family: "Roboto";
+        padding-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .number-step {
         display: flex;
+        justify-content: center; 
         align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 10vh;
-        background-color: $color-light-grey;
-
-        .fas {
-            padding-right: 0.5rem;
-            font-size: 1.5rem;
-            color: $color-text-localization;
-        }
-    
-        input {
-            text-align: center;
-            width: 40%;
-            min-width: 5rem;
-            border: none;
-            font-family: "Roboto";
-            font-weight: bold;
-            font-size: 1rem;
-            background-color: #eaeaea;
-            color: $color-text-localization;
-        }
+        position: relative;
+        border: none;
+        width: 1rem;
+        height: 1rem;
+        margin-right: -1rem;
+        border-radius: 50%;
+        padding: 0.5rem;
+        background-color: $primary-color;
+        font-family: "Roboto";
+        font-size: 1rem;
+        color: white;
     }
     
-    .introduce {
+}
+
+.menu-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin-left:0;
+    padding-left:0;
+
+}
+
+.list-of-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 90%;
+    
+    .steps {
         display: flex;
         align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 3rem 1rem;
+        justify-content: flex-start; 
         width: 100%;
+        font-family: "Roboto";
+        white-space: nowrap;
+        padding: 1.5rem;
+        border: none;
+        border-radius: 1rem;
         background-color: $color-introduce;
-
-        h2 {
-            text-align: center;
-            margin: 0 0;
-            padding: 0 3rem;
-            font-family: "Roboto";
-        }
-
-        p {
-            text-align: center;
-            font-family: "Roboto";
-            margin: 1rem 0 2rem;
-            font-size: 1.2rem;
-            font-weight: thin 100;
-            color: $color-text-localization;
-
-           
-        }
-            
-        a {
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 50rem;
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            font-family: "Roboto";
-            background: linear-gradient(to bottom, $secondary-color 0%, $primary-color 100%);
-            color: white;
-            transition: all 0.3s ease-in-out;
-        }
-
-        a:hover {
-            background: linear-gradient(to bottom, $secondary-color 50%, $primary-color 100%);
-            box-shadow: 0px 5px 21px -2px $color-box-shadow;
-            cursor: pointer;
-        }
-    }
-
-    .block-site-operation {
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding-bottom: 3rem;
-
-        > h3 {
-            align-self: flex-start;    
-            font-family: "Roboto";
-            padding-left: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .number-step {
+        font-size: 1.1rem;
+        font-weight: bold;
+        box-shadow: 0px 5px 21px -2px $color-box-shadow;
+    
+        .icone {
             display: flex;
-            justify-content: center; 
-            align-items: center;
-            position: relative;
-            border: none;
-            width: 1rem;
-            height: 1rem;
-            margin-right: -1rem;
-            border-radius: 50%;
-            padding: 0.5rem;
-            background-color: $primary-color;
-            font-family: "Roboto";
-            font-size: 1rem;
-            color: white;
-        }
-        
-        .menu-steps {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            list-style:none;
-            margin-left:0;
-            padding-left:0;
-        }
-        .list-of-steps {
-            display: flex;
-            align-items: center;
-            justify-content: center; 
-            width: 90%;
-        }
+            justify-content: flex-end;
+            width: 2rem;
+            padding-right: 1.5rem;
+            font-size: 1.3rem;
+            color: #555252;
 
-        
-        .steps {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start; 
-            width: 100%;
-            font-family: "Roboto";
-            white-space: nowrap;
-            padding: 1.5rem;
-            border: none;
-            border-radius: 1rem;
-            background-color: $color-introduce;
-            font-size: 1.1rem;
-            font-weight: bold;
-            box-shadow: 0px 5px 21px -2px $color-box-shadow;
-            
-            .icone {
-                display: flex;
-                justify-content: flex-end;
-                width: 2rem;
-                padding-right: 1.5rem;
-
-                i.fas {
-                    font-size: 1.3rem;
-                    color: #555252;
-                }
+            .fas:hover {
+                color:$primary-color;
             }
-            
-        }
-        .steps:hover i.fas {
-            color:$primary-color;
-        }
+        }   
     }
-    
-    #restaurant-main-block {
-        width: 100%;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        background-color: $color-introduce;
+}
 
-        h3 {
-            padding-left: 1.5rem;
-            padding-bottom: 1rem;
-            font-family: "Roboto";
-            font-size: 1.5rem;
-        }
+#restaurant-main-block {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $color-introduce;
 
-        .restaurant-list {
+    h3 {
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+        font-family: "Roboto";
+        font-size: 1.5rem;
+    }
+
+}    
+
+.block-restaurant-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+        
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .fa-heart {
+        background: -webkit-linear-gradient(#9356dc, #ff79da);
+        -webkit-background-clip: text;
+        background-clip: text;
+        height: 100%;
+        margin-right: 1rem;  
+        font-size: 2rem;
+        color: $color-text-localization;
+        transition: color 0.3s ease-in-out;
+    }
+        
+    .fa-heart:hover {
+        font-weight: bold;
+        color: transparent;
+        cursor: pointer;
+    }
+        
+}
+
+.restaurant-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style:none;
+    width: 100%;
+    margin-left:0;
+    padding-left:0;
+
+    .restaurant {
+        width: 90%;
+        margin-bottom: 2rem;
+        border-radius: 15px;
+        background-color: white;
+
+        .new {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            list-style:none;
-            width: 100%;
-            margin-left:0;
-            padding-left:0;
+            position: relative;
+            width: 20vw;
+            padding: 0.5rem;
+            margin-bottom: -3rem;
+            margin-right: 1rem;
+            background-color: $color-tertiary;
+            font-family: "Roboto";
+            font-weight: bold;
+            font-size: 1rem;
+            color:#22866d;
+        }
+    }
+}  
 
-            .restaurant {
-                width: 90%;
-                margin-bottom: 2rem;
-                border-radius: 15px;
-                background-color: white;
+.restaurant-pictures {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 0;
+    
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 28vh;
+        border-radius: 15px 15px 0 0;
+    }
+}
 
-                .new {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    position: relative;
-                    width: 20vw;
-                    padding: 0.5rem;
-                    margin-bottom: -3rem;
-                    margin-right: 1rem;
-                    background-color: $color-tertiary;
-                    font-family: "Roboto";
-                    font-weight: bold;
-                    font-size: 1rem;
-                    color:#22866d;
-                }
+.menu-restaurant {
+    margin-left: 1rem;
+    
+    h4 {
+        margin: 0.2rem;
+        font-size: 1.3rem;
+        font-family: "Roboto";
+    }
 
-                .restaurant-pictures {
-                    display: flex;
-                    align-items: flex-end;
-                    flex-direction: column;
-                    margin: 0;
-                    
-                    img {
-                        object-fit: cover;
-                        width: 100%;
-                        height: 28vh;
-                        border-radius: 15px 15px 0 0;
-                    }
-                }
-
-                .block-restaurant-description {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding-top: 0.5rem;
-                    padding-bottom: 0.5rem;
-
-                    a {
-                        text-decoration: none;
-                        color: black;
-                    }
-                    
-                    .menu-restaurant {
-                        margin-left: 1rem;
-                        
-                        h4 {
-                            margin: 0.2rem;
-                            font-size: 1.3rem;
-                            font-family: "Roboto";
-                        }
-
-                        .location-restaurant {
-                            display: inline;
-                            margin: none;
-                            font-family: "Roboto";
-                            font-size: 1.2rem;
-                            color: $color-text-localization;
-                        }
-                    }
-                }
-
-                .fa-heart {
-                    background: -webkit-linear-gradient(#9356dc, #ff79da);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    height: 100%;
-                    margin-right: 1rem;  
-                    font-size: 2rem;
-                    color: $color-text-localization;
-                    transition: color 0.3s ease-in-out;
-                }
-
-                .fa-heart:hover {
-                    font-weight: bold;
-                    color: transparent;
-                    cursor: pointer;
-                }
-            }
-        }   
+    .location-restaurant {
+        display: inline;
+        margin: 0;
+        font-family: "Roboto";
+        font-size: 1.2rem;
+        color: $color-text-localization;
     }
 }
 
@@ -328,30 +337,31 @@ footer {
         color: white;
     }
 
-    .rubric-list {
-        box-sizing: content-box;
-        list-style: none;
-        width: 90%;
-        padding: 0;
-        font-family: "Roboto";
-        font-size: 1rem;
-        color: white;
-    
-        .fas {
-            width: 1.5rem;
-            padding-right: 0.5rem;
+}
 
-        }
-    
-        > li {
-            padding-bottom: 0.5rem;
-            
-            a { 
-                text-decoration: none;
-                color: white;
-            }
-        }   
+.rubric-list {
+    box-sizing: content-box;
+    list-style: none;
+    width: 90%;
+    padding: 0;
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: white;
+
+    .fas {
+        width: 1.5rem;
+        padding-right: 0.5rem;
+
     }
+
+    > li {
+        padding-bottom: 0.5rem;
+        
+        a { 
+            text-decoration: none;
+            color: white;
+        }
+    }   
 }
 
 .loader {
@@ -377,16 +387,5 @@ footer {
     border-left: 5px solid transparent;
 
     animation: loading 1s linear infinite;
-}
-
-@keyframes loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes display-loader {
-    0% { opacity: 1; z-index: 100; }
-    90% { opacity: 0; z-index: 100; }
-    100% { opacity: 0; z-index: 1; }
 }
  

@@ -1,3 +1,25 @@
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes display-loader {
+  0% {
+    opacity: 1;
+    z-index: 100;
+  }
+  90% {
+    opacity: 0;
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
 .bold {
   font-weight: bold;
 }
@@ -33,7 +55,8 @@ main {
   min-height: 70vh;
   z-index: 9;
 }
-main .localization {
+
+.localization {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,12 +64,12 @@ main .localization {
   height: 10vh;
   background-color: #eaeaea;
 }
-main .localization .fas {
+.localization .fas {
   padding-right: 0.5rem;
   font-size: 1.5rem;
   color: #494545;
 }
-main .localization input {
+.localization input {
   text-align: center;
   width: 40%;
   min-width: 5rem;
@@ -57,7 +80,8 @@ main .localization input {
   background-color: #eaeaea;
   color: #494545;
 }
-main .introduce {
+
+.introduce {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,21 +91,21 @@ main .introduce {
   width: 100%;
   background-color: #f2f2f2;
 }
-main .introduce h2 {
+.introduce h2 {
   text-align: center;
   margin: 0 0;
   padding: 0 3rem;
   font-family: "Roboto";
 }
-main .introduce p {
+.introduce p {
   text-align: center;
   font-family: "Roboto";
   margin: 1rem 0 2rem;
   font-size: 1.2rem;
-  font-weight: thin 100;
+  font-weight: 100;
   color: #494545;
 }
-main .introduce a {
+.introduce a {
   text-align: center;
   text-decoration: none;
   border: none;
@@ -93,24 +117,25 @@ main .introduce a {
   color: white;
   transition: all 0.3s ease-in-out;
 }
-main .introduce a:hover {
+.introduce a:hover {
   background: linear-gradient(to bottom, #ff79da 50%, #9356dc 100%);
   box-shadow: 0px 5px 21px -2px #777;
   cursor: pointer;
 }
-main .block-site-operation {
+
+.block-site-operation {
   align-items: center;
   justify-content: center;
   width: 100%;
   padding-bottom: 3rem;
 }
-main .block-site-operation > h3 {
+.block-site-operation > h3 {
   align-self: flex-start;
   font-family: "Roboto";
   padding-left: 1.5rem;
   font-size: 1.5rem;
 }
-main .block-site-operation .number-step {
+.block-site-operation .number-step {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +151,8 @@ main .block-site-operation .number-step {
   font-size: 1rem;
   color: white;
 }
-main .block-site-operation .menu-steps {
+
+.menu-steps {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,13 +160,14 @@ main .block-site-operation .menu-steps {
   margin-left: 0;
   padding-left: 0;
 }
-main .block-site-operation .list-of-steps {
+
+.list-of-steps {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 90%;
 }
-main .block-site-operation .steps {
+.list-of-steps .steps {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -155,32 +182,59 @@ main .block-site-operation .steps {
   font-weight: bold;
   box-shadow: 0px 5px 21px -2px #777;
 }
-main .block-site-operation .steps .icone {
+.list-of-steps .steps .icone {
   display: flex;
   justify-content: flex-end;
   width: 2rem;
   padding-right: 1.5rem;
-}
-main .block-site-operation .steps .icone i.fas {
   font-size: 1.3rem;
   color: #555252;
 }
-main .block-site-operation .steps:hover i.fas {
+.list-of-steps .steps .icone .fas:hover {
   color: #9356dc;
 }
-main #restaurant-main-block {
+
+#restaurant-main-block {
   width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #f2f2f2;
 }
-main #restaurant-main-block h3 {
+#restaurant-main-block h3 {
   padding-left: 1.5rem;
   padding-bottom: 1rem;
   font-family: "Roboto";
   font-size: 1.5rem;
 }
-main #restaurant-main-block .restaurant-list {
+
+.block-restaurant-description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.block-restaurant-description a {
+  text-decoration: none;
+  color: black;
+}
+.block-restaurant-description .fa-heart {
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  height: 100%;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: #494545;
+  transition: color 0.3s ease-in-out;
+}
+.block-restaurant-description .fa-heart:hover {
+  font-weight: bold;
+  color: transparent;
+  cursor: pointer;
+}
+
+.restaurant-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,13 +244,13 @@ main #restaurant-main-block .restaurant-list {
   margin-left: 0;
   padding-left: 0;
 }
-main #restaurant-main-block .restaurant-list .restaurant {
+.restaurant-list .restaurant {
   width: 90%;
   margin-bottom: 2rem;
   border-radius: 15px;
   background-color: white;
 }
-main #restaurant-main-block .restaurant-list .restaurant .new {
+.restaurant-list .restaurant .new {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,58 +265,34 @@ main #restaurant-main-block .restaurant-list .restaurant .new {
   font-size: 1rem;
   color: #22866d;
 }
-main #restaurant-main-block .restaurant-list .restaurant .restaurant-pictures {
+
+.restaurant-pictures {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   margin: 0;
 }
-main #restaurant-main-block .restaurant-list .restaurant .restaurant-pictures img {
+.restaurant-pictures img {
   object-fit: cover;
   width: 100%;
   height: 28vh;
   border-radius: 15px 15px 0 0;
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description a {
-  text-decoration: none;
-  color: black;
-}
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant {
+
+.menu-restaurant {
   margin-left: 1rem;
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant h4 {
+.menu-restaurant h4 {
   margin: 0.2rem;
   font-size: 1.3rem;
   font-family: "Roboto";
 }
-main #restaurant-main-block .restaurant-list .restaurant .block-restaurant-description .menu-restaurant .location-restaurant {
+.menu-restaurant .location-restaurant {
   display: inline;
-  margin: none;
+  margin: 0;
   font-family: "Roboto";
   font-size: 1.2rem;
   color: #494545;
-}
-main #restaurant-main-block .restaurant-list .restaurant .fa-heart {
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  background-clip: text;
-  height: 100%;
-  margin-right: 1rem;
-  font-size: 2rem;
-  color: #494545;
-  transition: color 0.3s ease-in-out;
-}
-main #restaurant-main-block .restaurant-list .restaurant .fa-heart:hover {
-  font-weight: bold;
-  color: transparent;
-  cursor: pointer;
 }
 
 footer {
@@ -285,7 +315,8 @@ footer > .logo-footer {
   font-size: 1.5rem;
   color: white;
 }
-footer .rubric-list {
+
+.rubric-list {
   box-sizing: content-box;
   list-style: none;
   width: 90%;
@@ -294,14 +325,14 @@ footer .rubric-list {
   font-size: 1rem;
   color: white;
 }
-footer .rubric-list .fas {
+.rubric-list .fas {
   width: 1.5rem;
   padding-right: 0.5rem;
 }
-footer .rubric-list > li {
+.rubric-list > li {
   padding-bottom: 0.5rem;
 }
-footer .rubric-list > li a {
+.rubric-list > li a {
   text-decoration: none;
   color: white;
 }
@@ -327,29 +358,6 @@ footer .rubric-list > li a {
   border-radius: 20rem;
   border-left: 5px solid transparent;
   animation: loading 1s linear infinite;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes display-loader {
-  0% {
-    opacity: 1;
-    z-index: 100;
-  }
-  90% {
-    opacity: 0;
-    z-index: 100;
-  }
-  100% {
-    opacity: 0;
-    z-index: 1;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
