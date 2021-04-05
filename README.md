@@ -7,6 +7,11 @@ Avoir installé [Node.js](https://nodejs.org/fr/) *(v.14.15 ou plus)*
 # Installation
 Cloner le projet.
 
+Installez les dépendances avec:
+```
+npm install
+```
+
 Lancer cette commande pour générer le CSS depuis le SASS:
 ```
 npm run sass
