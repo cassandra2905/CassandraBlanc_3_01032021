@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+# Ohmyfood
+**Ohmyfood, un site 100% mobile qui répertorie les menus de restaurants gastronomiques.**
 
-You can use the [editor on GitHub](https://github.com/cassandra2905/CassandraBlanc_3_01032021/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+# Pré-requis
+Avoir installé [Node.js](https://nodejs.org/fr/) *(v.14.15 ou plus)*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Installation
+Cloner le projet.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+Lancer cette commande pour générer le CSS depuis le SASS:
+```
+npm run sass
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+La racine est sur le fichier ``index.html``.
 
-### Jekyll Themes
+# Fabriqué avec
+- [Visual Studio Code](https://code.visualstudio.com)
+- [Node.js](https://www.npmjs.com/get-npm)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/cassandra2905/CassandraBlanc_3_01032021/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Démo
+[GitHub Pages](https://cassandra2905.github.io/CassandraBlanc_3_01032021/)
 
-### Support or Contact
+# Auteur
+- [Cassandra BLANC](https://github.com/cassandra2905)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+# License
+Ce projet est sous licence Apache License 2.0 - (voir le fichier [LICENSE](https://github.com/cassandra2905/CassandraBlanc_3_01032021/blob/main/LICENSE) pour plus d'informations).
